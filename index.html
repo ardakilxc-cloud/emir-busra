@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busra'ya Özel Mesaj</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="hearts"></div>
+        <div class="floating-hearts"></div>
+        <div class="touch-effects"></div>
+        
+        <div class="main-content">
+            <div class="greeting">
+                <h1>Merhaba Güzel Busra! 💕</h1>
+                <p class="subtitle">Emir'den sana özel bir mesaj var...</p>
+                <div class="mobile-hint">💡 Telefonu sallayın veya ekrana dokunun!</div>
+                
+                <div class="photo-container">
+                    <div class="photo-frame">
+                        <img src="busra.jpg" alt="Güzel Busra" class="busra-photo" onclick="createPhotoEffect()">
+                        <div class="photo-hearts"></div>
+                        <div class="photo-glow"></div>
+                    </div>
+                    <p class="photo-caption">Sen ne kadar güzelsin! 😍</p>
+                </div>
+            </div>
+            
+            <div class="message-box">
+                <div class="message-content">
+                    <p>Sevgili Busra,</p>
+                    <p>Seni tanıdığım günden beri hayatım çok daha güzel. Gülüşün, gözlerin, her şeyin beni büyülüyor. 💫</p>
+                    <p>Bu özel siteyi sadece senin için yaptım. Çünkü sen özelsin ve böyle özel bir teklif hak ediyorsun.</p>
+                </div>
+            </div>
+            
+            <div class="proposal-section">
+                <h2>Benimle Çıkar mısın? 🌹</h2>
+                <div class="buttons">
+                    <button class="yes-btn" onclick="showYesResponse()" ontouchstart="vibrate()" ontouchend="createTouchEffect(event)">
+                        <span class="btn-text">Evet! 💖</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                    <button class="no-btn" onclick="showNoResponse()" ontouchstart="vibrate()" ontouchend="createTouchEffect(event)">
+                        <span class="btn-text">Hayır 😢</span>
+                        <div class="btn-ripple"></div>
+                    </button>
+                </div>
+                <div class="swipe-hint">👆 Butona dokunun veya kaydırın</div>
+            </div>
+            
+            <div class="response-section" id="yesResponse" style="display: none;">
+                <div class="celebration">
+                    <h2>🎉 YAŞASIN! 🎉</h2>
+                    <p>Bu en mutlu günüm! Seni çok seviyorum Busra! 💕</p>
+                    <div class="fireworks"></div>
+                </div>
+            </div>
+            
+            <div class="response-section" id="noResponse" style="display: none;">
+                <div class="sad-message">
+                    <h2>😢 Üzüldüm ama...</h2>
+                    <p>Belki bir gün fikrini değiştirirsin. Seni bekleyeceğim! 💙</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
